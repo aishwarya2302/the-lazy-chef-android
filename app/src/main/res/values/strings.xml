@@ -38,4 +38,9 @@
     <string name="github_text">We’re open source! Find us on GitHub and leave a star if you like our work :)</string>
     <string name="mail_text">Questions? Feel free to drop us a mail anytime.</string>
     <string name="twitter_text">Tweet about us!\n #thelazychef</string>
+    <string name="advanced_search_subheading">Customize your search with these filters</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="diet">Diet</string>
+    <string name="exclude_ingredients">Exclude Ingredients</string>
+    <string name="intolerances">Intolerances</string>
 </resources>

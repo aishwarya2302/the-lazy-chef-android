@@ -101,7 +101,7 @@ public class FindRecipesResults extends AppCompatActivity {
                                     findRecipesResultsSubheading.setText("Search results for " + dishQuery);
 
                                     // MAIN DISPLAY : make the text views visible and display the results(from the previously parsed json) for all 6 recipes
-
+                                    System.out.println("DEBUG RESPONSE: " + results);
                                     // set recipe 1
                                     JSONObject result1 = results.getJSONObject(0);
                                     String recipe1 = result1.getString("title");
@@ -120,7 +120,6 @@ public class FindRecipesResults extends AppCompatActivity {
                                             startActivity(browserIntent);
                                         }
                                     });
-
 
                                     // set recipe 2
                                     JSONObject result2 = results.getJSONObject(1);

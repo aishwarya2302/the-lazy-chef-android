@@ -17,6 +17,7 @@ public class FindRecipes extends AppCompatActivity {
 
     RelativeLayout searchButton;
     TextView enterDish;
+    Button advancedSearchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class FindRecipes extends AppCompatActivity {
 
                 // check if query is valid
                 String dishQuery = enterDish.getText().toString().trim();
-                if (dishQuery.length() > 0){
+                if (dishQuery.length() > 0) {
                     Intent findRecipesResultsOpener = new Intent(FindRecipes.this, FindRecipesResults.class);
 
                     // pass the nutrition query to the results page
@@ -49,6 +50,15 @@ public class FindRecipes extends AppCompatActivity {
                             .playOn(findViewById(R.id.enterDish));
                     Toast.makeText(getApplicationContext(), "Please enter a valid query!", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        advancedSearchButton = findViewById(R.id.advancedSearchButton);
+        advancedSearchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent advancedSearchPageOpener = new Intent(FindRecipes.this, AdvancedSearch.class);
+                startActivity(advancedSearchPageOpener);
             }
         });
     }
